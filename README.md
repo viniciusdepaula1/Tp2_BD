@@ -6,4 +6,4 @@ Banco dados em SQL representando o fluxo de trabalho de um posto de saúde que r
 Projeto em kotlin que realiza algumas consultas e atualizações no banco.
 Para executar basta executar o seguinte comando:
 
-  ` gradle run --args="consulta_ou_update <args>"`
+  ` gradle run --args="consulta_ou_update [args]"`
