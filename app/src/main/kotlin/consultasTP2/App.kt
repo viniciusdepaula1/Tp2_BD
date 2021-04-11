@@ -65,7 +65,13 @@ fun main(args: Array<String>) {
                 }
 
                 "2" -> {
-                    val statement2 = "SELECT * FROM Paciente"
+                    //retorna o código e data da consulta, nome do paciente e nome do enfermeiro
+                    //de todas as consultas que ocorreram ou ocorrerão na data informada
+                    val data_consulta = args[2].toString();
+
+                    val statement2 = "SELECT Consulta.Codigo, Consulta.C_data, Paciente.Nome, Enfermeiro.Nome " + 
+                        "FROM Consulta, Paciente, Enfermeiro " +
+                        "WHERE  Consulta.C_Data = '$data_consulta' and (CNS_Paciente = CNS) and (CPF_Enfermeiro = CPF)"
 
                     consulta(statement2, conn)
                 }
